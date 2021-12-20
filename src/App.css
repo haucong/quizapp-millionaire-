@@ -1,0 +1,182 @@
+.App{
+  display:flex;
+  height:100vh;
+  color:white;
+  background-color: #020230;
+}
+.main{
+  width: 70%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+  url('./assets/bg.jpg') center;
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  height: 50%;
+  position: relative;
+}
+.timer{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  bottom: 20px;
+  left: 40px;
+}
+.bottom{
+  height: 50%;
+}
+.trivia{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.answers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.answer{
+  width: 40%;
+  padding: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 10px 20px 10px;
+  border: 1px solid white;
+  background: linear-gradient(#0e0124, #22074d);
+}
+.answer:hover,
+.answer .active{
+  background: mediumblue;
+}
+.answer.correct {
+  animation: correct 1s ease forwards;
+}
+.answer.incorrect {
+  animation: incorrect 1s ease forwards;
+}
+@keyframes correct{
+  0%,22%, 42%{
+    background: mediumblue;
+  } 
+  20%,40%, 60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%, 100%{
+    background: rgb(10, 204, 10);
+    box-shadow: 1px 4px 11px violet;
+  }
+}
+
+
+@keyframes incorrect {
+
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+
+  62%,
+  100% {
+    background: red;
+    box-shadow: 1px 4px 11px violet;
+
+  }
+}
+.question{
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #020230, rgb(0, 0, 0));
+}
+
+.pyramid{
+  width: 25%;
+  margin: 10px auto;
+}
+.help{
+  height: 200px;
+  padding:40px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.monneyList{
+  list-style-type: none;
+}
+.monneyItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.active{
+  /* background-color: teal; */
+   background: linear-gradient(to right, rgba(3, 49, 255, 0.418), #091edf);
+  border:2px solid #fffb02;
+  box-shadow: 1px 4px 11px violet;
+  border-radius: 15px;
+}
+
+.earnedText{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.start{
+  position: relative;
+  top: 0;right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 200px;
+}
+.inputName{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(248, 182, 0);
+}
+.btnStart{
+  padding: 10px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+}
+.btnStart:hover{
+  color: mediumblue;
+  border: 2px solid mediumblue;
+  background-color: white;
+  font-weight: 700;
+}
